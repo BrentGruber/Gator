@@ -1,0 +1,30 @@
+# The Caddyfile is an easy way to configure your Caddy web server.
+#
+# Unless the file starts with a global options block, the first
+# uncommented line is always the address of your site.
+#
+# To use your own domain name (with automatic HTTPS), first make
+# sure your domain's A/AAAA DNS records are properly pointed to
+# this machine's public IP, then replace the line below with your
+# domain name.
+
+
+plex.brentgruber.com
+{
+        reverse_proxy http://100.116.49.63:32400
+}
+
+ombi.brentgruber.com
+{
+        reverse_proxy http://100.116.49.63
+}
+
+jellyfin.brentgruber.com
+{
+        reverse_proxy http://100.116.49.63
+}
+
+miniflux.brentgruber.com
+{
+        reverse_proxy http://100.102.102.13:8080
+}
